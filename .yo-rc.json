@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "co.edu.sena.ghostceet",
+      "nativeLanguage": "es"
+    },
+    "jhipsterVersion": "5.8.1",
+    "applicationType": "monolith",
+    "baseName": "ghostceet",
+    "packageName": "co.edu.sena.ghostceet",
+    "packageFolder": "co/edu/sena/ghostceet",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZGQ3MGIwNTZlY2NiOWM1OTMxM2U3ZjJiY2ZmZDg5ZGQ0MGM3NTVlODIxOWNmMTIzYTYxOWIyZDE3MzE1YzczNTMxZTQ5OGVkNTE3Zjk4ZTNmM2YyZGFiZDQ1YTJlNzk3MjI4YjRlMzllN2Q5NGEwYzkxODdkNTc4YmQ5NWM5N2E=",
+    "clientFramework": "react",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "es",
+    "languages": ["es"]
+  }
+}
