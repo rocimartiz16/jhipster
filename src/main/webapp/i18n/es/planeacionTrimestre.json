@@ -1,0 +1,22 @@
+{
+  "ghostceetApp": {
+    "planeacionTrimestre": {
+      "home": {
+        "title": "Planeacion Trimestres",
+        "createLabel": "Crear nuevo Planeacion Trimestre",
+        "createOrEditLabel": "Crear o editar Planeacion Trimestre"
+      },
+      "created": "Un nuevo Planeacion Trimestre ha sido creado con el identificador {{ param }}",
+      "updated": "Un Planeacion Trimestre ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Planeacion Trimestre ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Planeacion Trimestre {{ id }}?"
+      },
+      "detail": {
+        "title": "Planeacion Trimestre"
+      },
+      "planeacionActividad": "Planeacion Actividad",
+      "trimestre": "Trimestre"
+    }
+  }
+}

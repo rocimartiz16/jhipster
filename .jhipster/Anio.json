@@ -1,0 +1,43 @@
+{
+    "name": "Anio",
+    "fields": [
+        {
+            "fieldName": "numeroAnio",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "estado",
+            "fieldType": "Estado",
+            "fieldValues": "Habilitado,Inhabilitado",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "vinculacionInstructor",
+            "otherEntityName": "vinculacionInstructor",
+            "otherEntityRelationshipName": "anio1"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "trimestreVigente",
+            "otherEntityName": "trimestreVigente",
+            "otherEntityRelationshipName": "anio1"
+        }
+    ],
+    "changelogDate": "20190215133647",
+    "entityTableName": "anio",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,24 @@
+{
+  "ghostceetApp": {
+    "actividadProyecto": {
+      "home": {
+        "title": "Actividad Proyectos",
+        "createLabel": "Crear nuevo Actividad Proyecto",
+        "createOrEditLabel": "Crear o editar Actividad Proyecto"
+      },
+      "created": "Un nuevo Actividad Proyecto ha sido creado con el identificador {{ param }}",
+      "updated": "Un Actividad Proyecto ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Actividad Proyecto ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Actividad Proyecto {{ id }}?"
+      },
+      "detail": {
+        "title": "Actividad Proyecto"
+      },
+      "numeroActividad": "Numero Actividad",
+      "nombreActividad": "Nombre Actividad",
+      "planeacionActividad": "Planeacion Actividad",
+      "faseProyecto": "Fase Proyecto"
+    }
+  }
+}

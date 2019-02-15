@@ -1,0 +1,31 @@
+{
+    "name": "DisponibilidadCompetencias",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "instructor",
+            "otherEntityName": "instructor",
+            "otherEntityField": "id",
+            "otherEntityRelationshipName": "disponibilidadCompetencias"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "vinculacionInstructor",
+            "otherEntityName": "vinculacionInstructor",
+            "otherEntityField": "id",
+            "otherEntityRelationshipName": "disponibilidadCompetencias"
+        }
+    ],
+    "changelogDate": "20190215133654",
+    "entityTableName": "disponibilidad_competencias",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

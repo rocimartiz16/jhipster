@@ -1,0 +1,24 @@
+{
+  "ghostceetApp": {
+    "faseProyecto": {
+      "home": {
+        "title": "Fase Proyectos",
+        "createLabel": "Crear nuevo Fase Proyecto",
+        "createOrEditLabel": "Crear o editar Fase Proyecto"
+      },
+      "created": "Un nuevo Fase Proyecto ha sido creado con el identificador {{ param }}",
+      "updated": "Un Fase Proyecto ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Fase Proyecto ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Fase Proyecto {{ id }}?"
+      },
+      "detail": {
+        "title": "Fase Proyecto"
+      },
+      "nombreFase": "Nombre Fase",
+      "estadoFase": "Estado Fase",
+      "actividadProyecto7": "Actividad Proyecto 7",
+      "proyecto": "Proyecto"
+    }
+  }
+}

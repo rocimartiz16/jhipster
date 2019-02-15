@@ -1,0 +1,62 @@
+{
+    "name": "Instructor",
+    "fields": [
+        {
+            "fieldName": "estado",
+            "fieldType": "Estado",
+            "fieldValues": "Habilitado,Inhabilitado",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "vinculacionInstructor",
+            "otherEntityName": "vinculacionInstructor",
+            "otherEntityRelationshipName": "instructor"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "areaInstructor",
+            "otherEntityName": "areaInstructor",
+            "otherEntityRelationshipName": "instructor"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "disponibilidadCompetencias",
+            "otherEntityName": "disponibilidadCompetencias",
+            "otherEntityRelationshipName": "instructor"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "disponibilidadHoraria",
+            "otherEntityName": "disponibilidadHoraria",
+            "otherEntityRelationshipName": "instructor"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "horario",
+            "otherEntityName": "horario",
+            "otherEntityRelationshipName": "instructor"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "cliente",
+            "otherEntityName": "cliente",
+            "otherEntityField": "id",
+            "otherEntityRelationshipName": "instructor"
+        }
+    ],
+    "changelogDate": "20190215133648",
+    "entityTableName": "instructor",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

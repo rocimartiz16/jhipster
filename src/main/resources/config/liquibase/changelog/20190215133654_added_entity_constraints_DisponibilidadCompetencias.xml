@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity DisponibilidadCompetencias.
+    -->
+    <changeSet id="20190215133654-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="instructor_id"
+                                 baseTableName="disponibilidad_competencias"
+                                 constraintName="fk_disponibilidad_competencias_instructor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="instructor"/>
+
+        <addForeignKeyConstraint baseColumnNames="vinculacion_instructor_id"
+                                 baseTableName="disponibilidad_competencias"
+                                 constraintName="fk_disponibilidad_competencias_vinculacion_instructor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vinculacion_instructor"/>
+
+    </changeSet>
+</databaseChangeLog>

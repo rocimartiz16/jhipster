@@ -1,0 +1,86 @@
+{
+    "name": "Programa",
+    "fields": [
+        {
+            "fieldName": "codigo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "version",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 40
+        },
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 40
+        },
+        {
+            "fieldName": "sigla",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 40
+        },
+        {
+            "fieldName": "estado",
+            "fieldType": "Estado",
+            "fieldValues": "Habilitado,Inhabilitado",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "proyecto2",
+            "otherEntityName": "proyecto",
+            "otherEntityRelationshipName": "programa"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "competencia3",
+            "otherEntityName": "competencia",
+            "otherEntityRelationshipName": "programa"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ficha",
+            "otherEntityName": "ficha",
+            "otherEntityRelationshipName": "programa"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "nivelFormacion",
+            "otherEntityName": "nivelFormacion",
+            "otherEntityField": "nivelFormacion",
+            "otherEntityRelationshipName": "programa1"
+        }
+    ],
+    "changelogDate": "20190215133630",
+    "entityTableName": "programa",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

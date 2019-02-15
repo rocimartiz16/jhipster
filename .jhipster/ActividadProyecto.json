@@ -1,0 +1,46 @@
+{
+    "name": "ActividadProyecto",
+    "fields": [
+        {
+            "fieldName": "numeroActividad",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nombreActividad",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 300
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "planeacionActividad",
+            "otherEntityName": "planeacionActividad",
+            "otherEntityRelationshipName": "actividadProyecto"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "faseProyecto",
+            "otherEntityName": "faseProyecto",
+            "otherEntityField": "id",
+            "otherEntityRelationshipName": "actividadProyecto7"
+        }
+    ],
+    "changelogDate": "20190215133638",
+    "entityTableName": "actividad_proyecto",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

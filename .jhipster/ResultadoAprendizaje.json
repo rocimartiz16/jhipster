@@ -1,0 +1,46 @@
+{
+    "name": "ResultadoAprendizaje",
+    "fields": [
+        {
+            "fieldName": "codigo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 400
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "resultadosVistos",
+            "otherEntityName": "resultadosVistos",
+            "otherEntityRelationshipName": "resultadoAprendizaje"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "limitacionAmbiente",
+            "otherEntityName": "limitacionAmbiente",
+            "otherEntityRelationshipName": "resultadoAprendizaje"
+        }
+    ],
+    "changelogDate": "20190215133633",
+    "entityTableName": "resultado_aprendizaje",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

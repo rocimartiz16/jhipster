@@ -1,0 +1,25 @@
+{
+  "ghostceetApp": {
+    "jornadaInstructor": {
+      "home": {
+        "title": "Jornada Instructors",
+        "createLabel": "Crear nuevo Jornada Instructor",
+        "createOrEditLabel": "Crear o editar Jornada Instructor"
+      },
+      "created": "Un nuevo Jornada Instructor ha sido creado con el identificador {{ param }}",
+      "updated": "Un Jornada Instructor ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Jornada Instructor ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Jornada Instructor {{ id }}?"
+      },
+      "detail": {
+        "title": "Jornada Instructor"
+      },
+      "nombreJornada": "Nombre Jornada",
+      "descripcion": "Descripcion",
+      "estado": "Estado",
+      "diaJornada": "Dia Jornada",
+      "disponibilidadHoraria": "Disponibilidad Horaria"
+    }
+  }
+}

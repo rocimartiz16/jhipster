@@ -1,0 +1,66 @@
+{
+    "name": "VinculacionInstructor",
+    "fields": [
+        {
+            "fieldName": "fechaInicio",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "fechaFin",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "disponibilidadCompetencias",
+            "otherEntityName": "disponibilidadCompetencias",
+            "otherEntityRelationshipName": "vinculacionInstructor"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "disponibilidadHoraria",
+            "otherEntityName": "disponibilidadHoraria",
+            "otherEntityRelationshipName": "vinculacionInstructor"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "instructor",
+            "otherEntityName": "instructor",
+            "otherEntityField": "id",
+            "otherEntityRelationshipName": "vinculacionInstructor"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "anio1",
+            "otherEntityName": "anio",
+            "otherEntityField": "id",
+            "otherEntityRelationshipName": "vinculacionInstructor"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "vinculacion",
+            "otherEntityName": "vinculacion",
+            "otherEntityField": "tipoVinculacion",
+            "otherEntityRelationshipName": "vinculacionInstructor"
+        }
+    ],
+    "changelogDate": "20190215133649",
+    "entityTableName": "vinculacion_instructor",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

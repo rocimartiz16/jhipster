@@ -1,0 +1,29 @@
+{
+    "name": "PlaneacionTrimestre",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "planeacionActividad",
+            "otherEntityName": "planeacionActividad",
+            "otherEntityRelationshipName": "planeacionTrimestre"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "trimestre",
+            "otherEntityName": "trimestre",
+            "otherEntityField": "id",
+            "otherEntityRelationshipName": "planeacionTrimestre5"
+        }
+    ],
+    "changelogDate": "20190215133636",
+    "entityTableName": "planeacion_trimestre",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity PlaneacionActividad.
+    -->
+    <changeSet id="20190215133643-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="planeacion_trimestre_id"
+                                 baseTableName="planeacion_actividad"
+                                 constraintName="fk_planeacion_actividad_planeacion_trimestre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="planeacion_trimestre"/>
+
+        <addForeignKeyConstraint baseColumnNames="actividad_proyecto_id"
+                                 baseTableName="planeacion_actividad"
+                                 constraintName="fk_planeacion_actividad_actividad_proyecto_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="actividad_proyecto"/>
+
+    </changeSet>
+</databaseChangeLog>

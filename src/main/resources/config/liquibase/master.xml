@@ -5,6 +5,66 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133628_added_entity_Planeacion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133629_added_entity_NivelFormacion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133630_added_entity_Programa.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133631_added_entity_Proyecto.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133632_added_entity_Competencia.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133633_added_entity_ResultadoAprendizaje.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133634_added_entity_Jornada.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133635_added_entity_Trimestre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133636_added_entity_PlaneacionTrimestre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133637_added_entity_FaseProyecto.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133638_added_entity_ActividadProyecto.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133639_added_entity_EstadoFicha.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133640_added_entity_Ficha.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133641_added_entity_FichaTrimestre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133642_added_entity_ResultadosVistos.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133643_added_entity_PlaneacionActividad.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133644_added_entity_Documento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133645_added_entity_Cliente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133646_added_entity_Vinculacion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133647_added_entity_Anio.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133648_added_entity_Instructor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133649_added_entity_VinculacionInstructor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133650_added_entity_JornadaInstructor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133651_added_entity_DiaJornada.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133652_added_entity_Area.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133653_added_entity_AreaInstructor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133654_added_entity_DisponibilidadCompetencias.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133655_added_entity_DisponibilidadHoraria.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133656_added_entity_TipoAmbiente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133657_added_entity_Sede.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133658_added_entity_Ambiente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133659_added_entity_LimitacionAmbiente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133700_added_entity_Modalidad.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133701_added_entity_Dia.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133702_added_entity_TrimestreVigente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133703_added_entity_VersionHorario.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133704_added_entity_Horario.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20190215133630_added_entity_constraints_Programa.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133631_added_entity_constraints_Proyecto.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133632_added_entity_constraints_Competencia.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133635_added_entity_constraints_Trimestre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133636_added_entity_constraints_PlaneacionTrimestre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133637_added_entity_constraints_FaseProyecto.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133638_added_entity_constraints_ActividadProyecto.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133640_added_entity_constraints_Ficha.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133641_added_entity_constraints_FichaTrimestre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133642_added_entity_constraints_ResultadosVistos.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133643_added_entity_constraints_PlaneacionActividad.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133645_added_entity_constraints_Cliente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133648_added_entity_constraints_Instructor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133649_added_entity_constraints_VinculacionInstructor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133651_added_entity_constraints_DiaJornada.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133653_added_entity_constraints_AreaInstructor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133654_added_entity_constraints_DisponibilidadCompetencias.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133655_added_entity_constraints_DisponibilidadHoraria.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133658_added_entity_constraints_Ambiente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133659_added_entity_constraints_LimitacionAmbiente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133702_added_entity_constraints_TrimestreVigente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133703_added_entity_constraints_VersionHorario.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190215133704_added_entity_constraints_Horario.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

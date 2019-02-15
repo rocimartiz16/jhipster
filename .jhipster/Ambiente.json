@@ -1,0 +1,79 @@
+{
+    "name": "Ambiente",
+    "fields": [
+        {
+            "fieldName": "numeroAmbiente",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 10
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 45
+        },
+        {
+            "fieldName": "estado",
+            "fieldType": "Estado",
+            "fieldValues": "Habilitado,Inhabilitado",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "limitacion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 40
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "limitacionAmbiente",
+            "otherEntityName": "limitacionAmbiente",
+            "otherEntityRelationshipName": "ambiente"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "horario",
+            "otherEntityName": "horario",
+            "otherEntityRelationshipName": "ambiente"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "tipoAmbiente",
+            "otherEntityName": "tipoAmbiente",
+            "otherEntityField": "tipo",
+            "otherEntityRelationshipName": "ambiente"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "sede",
+            "otherEntityName": "sede",
+            "otherEntityField": "nombreSede",
+            "otherEntityRelationshipName": "ambiente"
+        }
+    ],
+    "changelogDate": "20190215133658",
+    "entityTableName": "ambiente",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

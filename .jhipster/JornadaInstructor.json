@@ -1,0 +1,54 @@
+{
+    "name": "JornadaInstructor",
+    "fields": [
+        {
+            "fieldName": "nombreJornada",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 80
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 200
+        },
+        {
+            "fieldName": "estado",
+            "fieldType": "Estado",
+            "fieldValues": "Habilitado,Inhabilitado",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "diaJornada",
+            "otherEntityName": "diaJornada",
+            "otherEntityRelationshipName": "jornadaInstructor"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "disponibilidadHoraria",
+            "otherEntityName": "disponibilidadHoraria",
+            "otherEntityRelationshipName": "jornada"
+        }
+    ],
+    "changelogDate": "20190215133650",
+    "entityTableName": "jornada_instructor",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

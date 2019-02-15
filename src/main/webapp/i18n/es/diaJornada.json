@@ -1,0 +1,23 @@
+{
+  "ghostceetApp": {
+    "diaJornada": {
+      "home": {
+        "title": "Dia Jornadas",
+        "createLabel": "Crear nuevo Dia Jornada",
+        "createOrEditLabel": "Crear o editar Dia Jornada"
+      },
+      "created": "Un nuevo Dia Jornada ha sido creado con el identificador {{ param }}",
+      "updated": "Un Dia Jornada ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Dia Jornada ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Dia Jornada {{ id }}?"
+      },
+      "detail": {
+        "title": "Dia Jornada"
+      },
+      "horaInicio": "Hora Inicio",
+      "horaFin": "Hora Fin",
+      "jornadaInstructor": "Jornada Instructor"
+    }
+  }
+}

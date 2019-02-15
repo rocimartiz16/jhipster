@@ -1,0 +1,39 @@
+{
+    "name": "DisponibilidadHoraria",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "vinculacionInstructor",
+            "otherEntityName": "vinculacionInstructor",
+            "otherEntityField": "id",
+            "otherEntityRelationshipName": "disponibilidadHoraria"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "jornada",
+            "otherEntityName": "jornadaInstructor",
+            "otherEntityField": "nombreJornada",
+            "otherEntityRelationshipName": "jornadaInstructor"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "instructor",
+            "otherEntityName": "instructor",
+            "otherEntityField": "id",
+            "otherEntityRelationshipName": "instructor"
+        }
+    ],
+    "changelogDate": "20190215133655",
+    "entityTableName": "disponibilidad_horaria",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,446 @@
+enum Estado{
+Habilitado, Inhabilitado
+}
+entity Planeacion{
+nombrePlaneacion String required maxlength(150) unique ,
+estado Estado required,
+
+
+
+}  
+
+entity NivelFormacion{
+nivelFormacion String required maxlength(20) unique,
+estado Estado required
+
+}
+paginate NivelFormacion with pagination
+
+entity Programa {
+
+codigo String required maxlength(50),
+version String required maxlength(40),
+nombre String required maxlength(40),
+sigla String required maxlength(40),
+estado Estado required,
+
+
+}
+
+paginate Programa with pagination
+
+relationship OneToMany {
+NivelFormacion{programa1} to Programa{nivelFormacion(nivelFormacion) required}
+}
+
+entity Proyecto{
+
+codigo String required maxlength(100) unique,
+estado Estado required,
+nombreProyecto String required maxlength(300),
+
+}
+paginate Proyecto with pagination
+
+relationship OneToMany {
+Programa{proyecto2} to Proyecto{programa required}
+}
+
+entity Competencia{
+
+codigo String required maxlength(50),
+descripcion String required maxlength(1000),
+
+}
+paginate Competencia with pagination
+
+relationship OneToMany{
+Programa{competencia3} to Competencia{programa required} 
+
+}
+entity ResultadoAprendizaje{
+codigo String required maxlength(100),
+descripcion String required maxlength(400),
+
+}
+paginate ResultadoAprendizaje with pagination
+
+entity Jornada{
+
+siglaJornada String required maxlength(10) unique,
+nombreJornada String required maxlength(85) unique,
+descripcion String required maxlength(245),
+imagenUrl String required maxlength(400),
+estado Estado required
+
+}
+paginate Jornada with pagination
+entity Trimestre {
+
+nombreTrimestre String required maxlength(20),
+
+estado Estado required
+
+}
+paginate Trimestre with pagination
+relationship OneToMany{
+
+Jornada{trimestre4} to Trimestre{jornada(nombreJornada) required}
+}
+
+entity PlaneacionTrimestre{
+
+}
+relationship OneToMany{
+Trimestre{planeacionTrimestre5} to PlaneacionTrimestre{trimestre required}
+
+}
+entity FaseProyecto{
+
+
+nombreFase  String required maxlength(20),
+estadoFase String required maxlength(40),
+
+
+}
+
+paginate FaseProyecto with pagination
+relationship OneToMany{
+Proyecto{faseProyecto6} to FaseProyecto{proyecto(codigo) required}
+
+}
+entity ActividadProyecto{
+numeroActividad Integer required,
+nombreActividad String required maxlength(300)
+}
+paginate ActividadProyecto with pagination
+relationship OneToMany{
+FaseProyecto{actividadProyecto7} to ActividadProyecto{faseProyecto required}
+
+}
+
+
+entity EstadoFicha {
+
+  nombreEstado String required maxlength(40) unique ,
+  estado Estado required
+}
+
+entity Ficha {
+
+  numero String required maxlength(100) unique,
+  fechaInicio ZonedDateTime  required,
+  fechaFin  ZonedDateTime  required,
+  ruta String required  ,
+  estado Estado required 
+}
+
+relationship OneToMany {
+  Ficha { fichaTrimestre } to FichaTrimestre{ficha(numero) required}
+}
+paginate EstadoFicha with pagination
+relationship OneToMany {
+  Programa{ ficha } to Ficha{programa required}
+}
+relationship OneToMany {
+  EstadoFicha{ficha} to Ficha{estadoFicha(nombreEstado) required}
+}
+
+entity FichaTrimestre {
+  
+  }
+
+entity ResultadosVistos {
+  
+  }
+
+relationship OneToMany {
+  ResultadoAprendizaje{resultadosVistos} to ResultadosVistos {resultadoAprendizaje required}
+
+  FichaTrimestre{resultadosVistos} to ResultadosVistos {fichaTrimestre required}
+
+}
+
+
+
+
+entity PlaneacionActividad{
+ 
+
+
+}
+
+relationship OneToMany {
+  PlaneacionTrimestre { planeacionActividad } to PlaneacionActividad{ PlaneacionTrimestre required}
+  
+
+}
+relationship OneToMany {
+  ActividadProyecto { planeacionActividad } to PlaneacionActividad{ ActividadProyecto required}
+  
+
+}
+
+
+
+entity Documento {
+
+  sigla String required maxlength(20) unique ,
+  nombre String required maxlength(45) unique ,
+  estado Estado required
+}
+
+entity Cliente {
+
+numeroDocumento String required maxlength(15),
+primerNombre String required maxlength(20),
+segundoNombre String maxlength(20),
+primerApellido String required maxlength(20),
+segundoApellido String maxlength(20)
+}
+paginate Cliente with pagination
+
+relationship OneToMany {
+  Documento { cliente } to Cliente{Documento(nombre) required}
+  
+}
+
+
+
+entity Vinculacion { 
+
+tipoVinculacion String required maxlength(40) unique,
+horas Integer required ,
+estado Estado required
+
+}
+paginate Vinculacion with pagination
+
+entity Anio {
+  numeroAnio Integer  unique ,
+  estado Estado required
+}
+paginate Anio with pagination
+
+entity Instructor {
+  
+  estado Estado required
+
+}
+
+relationship OneToMany {
+ Cliente{instructor} to Instructor{cliente  required}
+
+
+
+}
+
+paginate Instructor with pagination
+
+
+
+
+entity VinculacionInstructor {
+  
+  fechaInicio ZonedDateTime required,
+  fechaFin ZonedDateTime required,
+  
+
+}
+paginate VinculacionInstructor with pagination
+
+relationship OneToMany {
+  Instructor { vinculacionInstructor } to VinculacionInstructor{instructor required}
+}
+
+relationship OneToMany {
+  Anio { vinculacionInstructor } to VinculacionInstructor{anio1 required}
+}
+
+relationship OneToMany {
+  Vinculacion { vinculacionInstructor } to VinculacionInstructor{Vinculacion(tipoVinculacion) required}
+}
+
+
+ entity JornadaInstructor {
+  nombreJornada String required maxlength(80),
+  descripcion String required maxlength(200),
+  estado Estado required
+}
+
+paginate JornadaInstructor with pagination
+
+
+entity DiaJornada {
+  
+  horaInicio Integer required ,
+  horaFin Integer required 
+}
+paginate DiaJornada with pagination
+
+relationship OneToMany {
+  JornadaInstructor { diaJornada } to DiaJornada{jornadaInstructor(nombreJornada) required}
+}
+
+
+
+entity Area {
+  nombreArea String required maxlength(40) unique,
+  estado Estado required,
+  urlLogo String maxlength(400) 
+}
+
+paginate Area with pagination
+
+entity AreaInstructor {
+  
+  estado Estado required
+}
+
+relationship OneToMany {
+  Area { areaInstructor} to AreaInstructor{area(nombreArea) required}
+}
+
+relationship OneToMany {
+  Instructor { areaInstructor } to AreaInstructor{instructor required}
+}
+
+
+
+entity DisponibilidadCompetencias {
+  
+  
+}
+paginate DisponibilidadCompetencias  with pagination
+
+
+relationship OneToMany {
+  Instructor {disponibilidadCompetencias} to DisponibilidadCompetencias{instructor required}
+}
+
+relationship OneToMany {
+  VinculacionInstructor { disponibilidadCompetencias } to DisponibilidadCompetencias{vinculacionInstructor required}
+}
+
+entity DisponibilidadHoraria {
+  
+
+}
+relationship OneToMany {
+  VinculacionInstructor { disponibilidadHoraria } to DisponibilidadHoraria{vinculacionInstructor required}
+}
+
+relationship OneToMany{
+JornadaInstructor to DisponibilidadHoraria{jornada(nombreJornada) required}    
+Instructor to DisponibilidadHoraria{instructor required}
+
+
+   
+
+}
+
+entity TipoAmbiente{
+
+tipo  String required maxlength (40) unique,
+descripcion  String required maxlength (100),
+estado Estado required
+}
+ paginate TipoAmbiente with pagination
+
+
+entity Sede{
+   
+    nombreSede String required maxlength (100) unique,
+    direccion String required maxlength (100),
+    estado Estado required
+}
+
+
+entity Ambiente{
+     
+     numeroAmbiente String required maxlength (10),
+     descripcion String required maxlength (45),
+     estado Estado required,
+     limitacion String required maxlength (40),
+     
+
+}
+paginate Ambiente with pagination
+
+relationship OneToMany{
+TipoAmbiente{ambiente}to Ambiente{tipoAmbiente(tipo) required}    
+Sede {ambiente}to Ambiente {sede(nombreSede) required}
+
+}
+
+entity LimitacionAmbiente{
+   
+}
+
+relationship OneToMany{
+ResultadoAprendizaje to LimitacionAmbiente{resultadoAprendizaje required}
+Ambiente to LimitacionAmbiente{ambiente required}
+}
+
+entity Modalidad{
+     
+     nombre String required maxlength (100) unique ,
+     estado Estado required,
+     color String required maxlength (50)
+}
+
+entity Dia{
+  
+    nombreDia String required maxlength (10) unique,
+    estado Estado required,
+    color  String required maxlength (50)
+
+}
+
+
+entity TrimestreVigente{
+    
+    anio Integer required,
+    trimestreProgramado Integer required,
+    fechaInicio  ZonedDateTime required,
+    fechaFin ZonedDateTime required,
+    estado Estado required
+}
+ paginate TrimestreVigente with pagination
+
+relationship OneToMany{
+Anio {trimestreVigente} to TrimestreVigente{anio1 required}
+}
+
+entity VersionHorario{
+   
+   numeroVersion Integer required,
+   estado Estado required,
+   trimestreVigenteId Integer required
+   
+}
+ paginate  VersionHorario with pagination
+
+
+relationship OneToMany{
+TrimestreVigente to VersionHorario{versionTrimestre required},
+}
+
+entity Horario{
+
+   horaInicio ZonedDateTime required ,
+   horaFin ZonedDateTime required,
+  
+}
+
+
+relationship OneToMany{
+Modalidad to Horario {modalidad(nombre) required},
+Dia to Horario{dia(nombreDia) required},
+FichaTrimestre to Horario {fichaTrimestre required},
+Ambiente to Horario {ambiente required},
+Instructor to Horario {instructor required}
+VersionHorario {horario} to Horario{versionHorario required }
+}
+
+

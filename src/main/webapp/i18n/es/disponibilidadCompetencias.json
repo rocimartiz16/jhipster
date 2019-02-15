@@ -1,0 +1,22 @@
+{
+  "ghostceetApp": {
+    "disponibilidadCompetencias": {
+      "home": {
+        "title": "Disponibilidad Competencias",
+        "createLabel": "Crear nuevo Disponibilidad Competencias",
+        "createOrEditLabel": "Crear o editar Disponibilidad Competencias"
+      },
+      "created": "Un nuevo Disponibilidad Competencias ha sido creado con el identificador {{ param }}",
+      "updated": "Un Disponibilidad Competencias ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Disponibilidad Competencias ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Disponibilidad Competencias {{ id }}?"
+      },
+      "detail": {
+        "title": "Disponibilidad Competencias"
+      },
+      "instructor": "Instructor",
+      "vinculacionInstructor": "Vinculacion Instructor"
+    }
+  }
+}

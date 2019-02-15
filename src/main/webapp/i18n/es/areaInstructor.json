@@ -1,0 +1,23 @@
+{
+  "ghostceetApp": {
+    "areaInstructor": {
+      "home": {
+        "title": "Area Instructors",
+        "createLabel": "Crear nuevo Area Instructor",
+        "createOrEditLabel": "Crear o editar Area Instructor"
+      },
+      "created": "Un nuevo Area Instructor ha sido creado con el identificador {{ param }}",
+      "updated": "Un Area Instructor ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Area Instructor ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Area Instructor {{ id }}?"
+      },
+      "detail": {
+        "title": "Area Instructor"
+      },
+      "estado": "Estado",
+      "area": "Area",
+      "instructor": "Instructor"
+    }
+  }
+}
